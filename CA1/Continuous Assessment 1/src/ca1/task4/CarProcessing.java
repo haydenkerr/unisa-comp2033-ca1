@@ -22,7 +22,7 @@ public class CarProcessing {
 			System.out.println(c);
 		}
 	}
-	// ask to remve duplicates
+	
 	public Car[] removeDuplicates(Car[] inputArray) {
 		return null;
 	}
