@@ -15,7 +15,7 @@ Academic Misconduct policy.
  */
 import java.util.Scanner;
 
-import ca1.task1.CaesarCypher;
+
 
 /**This task does not have any tests associated with it.  
 In this task, you are required to:
