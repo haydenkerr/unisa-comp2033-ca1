@@ -71,16 +71,20 @@ public class ArrayCount {
 					
 		    		String[] stringArray;
 		    		
-		    		stringArray = inputArray.split(" ");
+		    		System.out.println("Please enter the delimiter: ");
+		    		System.out.print("Just enter as  , or ,_ or _ ");
+		    		
+		    		String delimiter=scanner.nextLine();
+		    		
+		    		stringArray = inputArray.split( delimiter);
+		    	
 
-		            for (String a : stringArray)
-		                System.out.println(a);
-//					
-//		    		for (int i = 0; i < inputArray.length(); i++) {
-//		    			inputArray[i];
-//						
-//					}
-					String target = "Apple";
+		    		System.out.print("Please enter the target: ");
+		    		String target =scanner.nextLine();
+					
+
+
+					
 					
 					int counted = arrayCount.count(stringArray,target);
 					
