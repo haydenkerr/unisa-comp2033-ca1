@@ -48,9 +48,23 @@ public class Loops {
 			while(exit) {
 	    	Scanner scanner = new Scanner(System.in); 
 	    		System.out.println("");
-	    		System.out.print("How many times would you like \"words\" on screen? ");
+	    		
+	    		//Created number validation with try / catch statement
+				// used logic that only int can be entered
+				// used the NumberFormtException 
+				int numberTimes = 0;
+				boolean validInput = false;
 				
-				int numberTimes = Integer.parseInt(scanner.nextLine());
+				while (!validInput) {
+					System.out.print("How many times would you like \"words\" on screen? ");
+					String input = scanner.nextLine();
+				    try {
+				    	numberTimes = Integer.parseInt(input);
+				        validInput = true;
+				    } catch (NumberFormatException e) {
+				        System.out.println("Invalid input. Please enter an integer value.");
+				    }
+				}
 				
 				Loops loopWords = new Loops();   
 				loopWords.printWords(numberTimes);
