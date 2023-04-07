@@ -70,7 +70,9 @@ public class CaesarCypher {
 			String input = scanner.nextLine();
 			char[] charArray = input.toCharArray();
 
-
+			//Created number validation with try / catch statement
+			// used logic that only int can be entered
+			// used the NumberFormtException 
 			int inputOffset = 0;
 			boolean validInput = false;
 			while (!validInput) {
