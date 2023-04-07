@@ -13,7 +13,7 @@ Academic Misconduct policy.
  */
 import java.util.Scanner;
 
-public class CaesarCypher {
+public class ArrayCount {
 
 	
 	   private static final int ALPHABET_LENGTH = 26;
@@ -87,10 +87,10 @@ public class CaesarCypher {
 			}
 			
 			
-			char[] encoded = CaesarCypher.encode(charArray, inputOffset);
+			char[] encoded = ArrayCount.encode(charArray, inputOffset);
 			System.out.println("Encoded message: " + new String(encoded));
 
-			char[] decoded = CaesarCypher.decode(encoded, inputOffset);
+			char[] decoded = ArrayCount.decode(encoded, inputOffset);
 			System.out.println("Decoded message: " + new String(decoded));
 			
 			System.out.println();
@@ -101,7 +101,7 @@ public class CaesarCypher {
 			
 			if(response.equalsIgnoreCase("n")) {
 				char[] goodbye = "Goodbye".toCharArray();
-				char[] exitEncoded = CaesarCypher.encode(goodbye, inputOffset);
+				char[] exitEncoded = ArrayCount.encode(goodbye, inputOffset);
 				exit = true;
 				
 				System.out.print("Goodbye - "+ new String(exitEncoded) );
