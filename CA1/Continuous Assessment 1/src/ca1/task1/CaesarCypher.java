@@ -1,7 +1,5 @@
 package ca1.task1;
 
-
-
 /**
  * @author hayden
  *  File: CaesarCypher.java
@@ -27,7 +25,7 @@ public class CaesarCypher {
 	 * @return
 	 */
 	public static char[] encode(char[] input, int offset) {
-	        char[] encodedInput = new char[input.length]; 
+	        char[] encodedOutput = new char[input.length]; 
 	        for (int i = 0; i < input.length; i++) {
 	            char c = input[i];
 	            if (Character.isLetter(c)) { //checks if array entry is a letter.
@@ -36,27 +34,27 @@ public class CaesarCypher {
 	                // if c = 26(z)  
 	                int encoded = ((c - startingLetter + offset) % ALPHABET_LENGTH + ALPHABET_LENGTH) % ALPHABET_LENGTH;// gets the encoded letter ID 
 	            
-	                encodedInput[i] = (char) (startingLetter + encoded); // converts to character
+	                encodedOutput[i] = (char) (startingLetter + encoded); // converts to character
 	            } else {
-	                encodedInput[i] = c; // if not a alphabetic letter, then return. works for symbols, and numbers
+	                encodedOutput[i] = c; // if not a alphabetic letter, then return. works for symbols, and numbers
 	            }
 	        }
-	        return encodedInput;
+	        return encodedOutput;
 	    }
 	
 	   public static char[] decode(char[] input, int offset) {
-	        char[] decodedInput = new char[input.length];
+	        char[] decodedOutput = new char[input.length];
 	        for (int i = 0; i < input.length; i++) {
 	            char c = input[i];
 	            if (Character.isLetter(c)) { //checks if array entry is a letter.
 	                char startingLetter = Character.isUpperCase(c) ? 'A' : 'a'; // sets the base
 	                int encoded = ((c - startingLetter - offset) % ALPHABET_LENGTH + ALPHABET_LENGTH) % ALPHABET_LENGTH; // gets the decoded letter ID 
-	                decodedInput[i] = (char) (startingLetter + encoded); // converts to character
+	                decodedOutput[i] = (char) (startingLetter + encoded); // converts to character
 	            } else {
-	                decodedInput[i] = c;
+	                decodedOutput[i] = c;
 	            }
 	        }
-	        return decodedInput;
+	        return decodedOutput;
 	    }
 	   
 	    public static void main(String[] args) {
