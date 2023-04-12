@@ -26,4 +26,6 @@ public class Car {
 	public Car(String make, String model, String color) {
 		
 	}
+	
+	public void noDuplicates() {}
 }
