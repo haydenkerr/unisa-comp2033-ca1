@@ -11,8 +11,10 @@ package ca1.task3;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ca1.task3.ArrayCount;
 
 class ArrayCount_Test {
 
@@ -21,25 +23,48 @@ class ArrayCount_Test {
 	}
 
 	@Test
-	void testEncode() {
+	void testCountOne() {
 		ArrayCount ac = new ArrayCount();
 		
-		char[] input = {'a', 'b', 'c'};
-		char[] expected = {'c', 'd', 'e'};
+		String[] inputString = {"apple", "banana", "orange", "pineapple", "fruit"};
+	
+		String inputTarget = "apple";
 		
-		assertArrayEquals(expected, ac.encode(input, 2), "The encoding method does not work as expected.");
+		int expected = 1;
+		
+
+		assertEquals(expected, ac.count(inputString, inputTarget), "The count does not work as expected.");
 	}
 
 	@Test
-	void testDecode() {
+	void testCountTwo() {
 		ArrayCount ac = new ArrayCount();
 		
+		String[] inputString = {"apple", "banana", "orange", "apple", "fruit"};
 	
-		char[] input = {'c', 'd', 'e'};
-		char[] expected = {'a', 'b', 'c'};
+		String inputTarget = "apple";
 		
-		assertArrayEquals(expected, ac.decode(input, 2), "The decoding method does not work as expected.");
+		int expected = 2;
+		
+	
+	
+		assertEquals(expected, ac.count(inputString, inputTarget), "The count does not work as expected.");
 	}
+	@Test
+	void testCountNone() {
+		ArrayCount ac = new ArrayCount();
+		
+		String[] inputString = {"apple", "banana", "orange", "apple", "fruit"};
+	
+		String inputTarget = "pineapple";
+		
+		int expected = 0;
+		
+	
+	
+		assertEquals(expected, ac.count(inputString, inputTarget), "The count does not work as expected.");
+	}
+	
 }
 
-}
+

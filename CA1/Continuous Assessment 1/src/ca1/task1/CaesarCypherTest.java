@@ -13,7 +13,7 @@ class CaesarCypherTest {
 
 	@Test
 	void testEncode() {
-		ArrayCount cc = new ArrayCount();
+		CaesarCypher cc = new CaesarCypher();
 		
 		char[] input = {'a', 'b', 'c'};
 		char[] expected = {'c', 'd', 'e'};
@@ -23,7 +23,7 @@ class CaesarCypherTest {
 
 	@Test
 	void testDecode() {
-		ArrayCount cc = new ArrayCount();
+		CaesarCypher cc = new CaesarCypher();
 		
 	
 		char[] input = {'c', 'd', 'e'};
