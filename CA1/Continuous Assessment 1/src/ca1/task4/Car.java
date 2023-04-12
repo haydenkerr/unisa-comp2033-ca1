@@ -24,7 +24,21 @@ public class Car {
 	private String color;
 	
 	public Car(String make, String model, String color) {
-		
+		this.make = make;
+		this.model = model;
+		this.color = color;
+	}
+	// create getters for the car to be able to 
+	public String getMake() {
+		return make;
+	}
+	
+	public String getModel() {
+		return model;
+	}
+	
+	public String getColor() {
+		return color;
 	}
 	
 	public void noDuplicates() {}
