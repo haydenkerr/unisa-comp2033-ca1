@@ -13,6 +13,8 @@ Your method should remove duplicates from the given array using the Car equals()
 Write unit tests for both the Car and the CarProcessing class. 
 
 
+
+
  */
 
 
