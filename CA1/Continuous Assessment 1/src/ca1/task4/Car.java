@@ -12,11 +12,9 @@ Implement the ‘removeDuplicates’ method in the CarProcessing class.
 Your method should remove duplicates from the given array using the Car equals() method. 
 Write unit tests for both the Car and the CarProcessing class. 
 
-
-
-
  */
 
+import java.util.Objects;
 
 public class Car {
 	private String make;
@@ -28,7 +26,18 @@ public class Car {
 		this.model = model;
 		this.color = color;
 	}
+	
 	// create getters for the car to be able to 
+	public void setMake(String make) {
+		this.make = make;
+	}
+	public void setModel(String model) {
+		this.model = model;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+
 	public String getMake() {
 		return make;
 	}
@@ -40,6 +49,31 @@ public class Car {
 	public String getColor() {
 		return color;
 	}
+
 	
-	public void noDuplicates() {}
+	
+	
+	@Override
+	public String toString() {
+		return make + ", " + model + ", " + color;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(make, color, model);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof Car))
+			return false;
+		Car other = (Car) obj;
+		return Objects.equals(make, other.make) && Objects.equals(model, other.model)  
+				&& Objects.equals(color, other.color);
+	}
+	
+
+    
 }
