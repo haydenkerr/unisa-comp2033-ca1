@@ -1,9 +1,7 @@
 package ca1.task1;
 
-
-
 /**
- * @author hayde
+ * @author hayden
  *  File: CaesarCypher.java
 Author: Hayden Kerr
 Email Id: kerhy006@mymail.unisa.edu.au
@@ -27,7 +25,7 @@ public class CaesarCypher {
 	 * @return
 	 */
 	public static char[] encode(char[] input, int offset) {
-	        char[] encodedInput = new char[input.length]; 
+	        char[] encodedOutput = new char[input.length]; 
 	        for (int i = 0; i < input.length; i++) {
 	            char c = input[i];
 	            if (Character.isLetter(c)) { //checks if array entry is a letter.
@@ -36,27 +34,27 @@ public class CaesarCypher {
 	                // if c = 26(z)  
 	                int encoded = ((c - startingLetter + offset) % ALPHABET_LENGTH + ALPHABET_LENGTH) % ALPHABET_LENGTH;// gets the encoded letter ID 
 	            
-	                encodedInput[i] = (char) (startingLetter + encoded); // converts to character
+	                encodedOutput[i] = (char) (startingLetter + encoded); // converts to character
 	            } else {
-	                encodedInput[i] = c; // if not a alphabetic letter, then return. works for symbols, and numbers
+	                encodedOutput[i] = c; // if not a alphabetic letter, then return. works for symbols, and numbers
 	            }
 	        }
-	        return encodedInput;
+	        return encodedOutput;
 	    }
 	
 	   public static char[] decode(char[] input, int offset) {
-	        char[] decodedInput = new char[input.length];
+	        char[] decodedOutput = new char[input.length];
 	        for (int i = 0; i < input.length; i++) {
 	            char c = input[i];
 	            if (Character.isLetter(c)) { //checks if array entry is a letter.
 	                char startingLetter = Character.isUpperCase(c) ? 'A' : 'a'; // sets the base
 	                int encoded = ((c - startingLetter - offset) % ALPHABET_LENGTH + ALPHABET_LENGTH) % ALPHABET_LENGTH; // gets the decoded letter ID 
-	                decodedInput[i] = (char) (startingLetter + encoded); // converts to character
+	                decodedOutput[i] = (char) (startingLetter + encoded); // converts to character
 	            } else {
-	                decodedInput[i] = c;
+	                decodedOutput[i] = c;
 	            }
 	        }
-	        return decodedInput;
+	        return decodedOutput;
 	    }
 	   
 	    public static void main(String[] args) {
@@ -66,34 +64,47 @@ public class CaesarCypher {
 			System.out.println("Caesar Cypher - Will encode alphabetic letters only");
 			while(exit) {
 	    	Scanner scanner = new Scanner(System.in); 
-	    		System.out.println("");
-	    		System.out.print("Enter a message to encode: ");
-				String input = scanner.nextLine();
-				char[] charArray = input.toCharArray();
+	    	
+    		System.out.println("");
+    		System.out.print("Enter a message to encode: ");
+			String input = scanner.nextLine();
+			char[] charArray = input.toCharArray();
 
+
+			int inputOffset = 0;
+			boolean validInput = false;
+			while (!validInput) {
 				System.out.print("Enter an offset value: ");
-				int offset = Integer.parseInt(scanner.nextLine());
-				
-				char[] encoded = CaesarCypher.encode(charArray, offset);
-				System.out.println("Encoded message: " + new String(encoded));
+			    String offsetString = scanner.nextLine();
+			    try {
+			    	inputOffset = Integer.parseInt(offsetString);
+			        validInput = true;
+			    } catch (NumberFormatException e) {
+			        System.out.println("Invalid input. Please enter an integer value.");
+			    }
+			}
+			
+			
+			char[] encoded = CaesarCypher.encode(charArray, inputOffset);
+			System.out.println("Encoded message: " + new String(encoded));
 
-				char[] decoded = CaesarCypher.decode(encoded, offset);
-				System.out.println("Decoded message: " + new String(decoded));
+			char[] decoded = CaesarCypher.decode(encoded, inputOffset);
+			System.out.println("Decoded message: " + new String(decoded));
+			
+			System.out.println();
+			System.out.print("Would you like to encode/decode again? Y/N ");
+			
+			String response = scanner.nextLine();
+			
+			
+			if(response.equalsIgnoreCase("n")) {
+				char[] goodbye = "Goodbye".toCharArray();
+				char[] exitEncoded = CaesarCypher.encode(goodbye, inputOffset);
+				exit = true;
 				
-				System.out.println();
-				System.out.print("Would you like to encode/decode again? Y/N ");
-				
-				String response = scanner.nextLine();
-				
-				
-				if(response.equalsIgnoreCase("n")) {
-					char[] goodbye = "Goodbye".toCharArray();
-					char[] exitEncoded = CaesarCypher.encode(goodbye, offset);
-					exit = true;
-					
-					System.out.print("Goodbye - "+ new String(exitEncoded) );
-					break;
-				}
+				System.out.print("Goodbye - "+ new String(exitEncoded) );
+				break;
+			}
 				
 					
 			}
