@@ -22,9 +22,9 @@ public class CarProcessing {
 				new Car("Honda", "Civic", "Purple")
 		};
 		
-		Car[] noDuplicates = cp.removeDuplicates(cars);
+		Car[] noDuplicatesObj = cp.removeDuplicates(cars);
 		
-		for(Car c : noDuplicates ) {
+		for(Car c : noDuplicatesObj ) {
 			System.out.println(c);
 		}
 	}
@@ -32,18 +32,24 @@ public class CarProcessing {
 	
 	
 	public Car[] removeDuplicates(Car[] inputArray) {
-		
-	      System.out.println("Duplicate elements from array using HashSet data structure");
-	      Set<Car> set = new HashSet<>();
 
-	      for (Car car : cars) {
-	            if (set.equals() == false) {
-	                System.out.println("found a duplicate element in array : "
-	                        + name);
+		int carCount = 0;
+	    for (int i = 0; i < inputArray.length; i++) {
+	        boolean isDuplicate = false;
+	        for (int j = i + 1; j < inputArray.length; j++) {
+	            if (inputArray[i].equals(inputArray[j])) {
+	                isDuplicate = true;
+	                break;
 	            }
 	        }
+	        if (!isDuplicate) {
+	        	carCount++;
+	        }
+	    }
+	    
+	        
 
-		return null;
+	
 	}
 	
 }
