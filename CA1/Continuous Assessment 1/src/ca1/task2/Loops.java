@@ -4,14 +4,16 @@ package ca1.task2;
 
 /**
  * @author hayden
+ *  * <p>Task 4: “Remove duplicate object from array”
+ *   * <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a><p>
  *  File: Loops.java
-Author: Hayden Kerr
-Email Id: kerhy006@mymail.unisa.edu.au
-COMP2033 - Applied Data Structures
-This is my own work as defined by the University's
-Academic Misconduct policy.
-04/04/2023
- *
+ *  Author: Hayden Kerr
+ *  Email Id: kerhy006@mymail.unisa.edu.au
+ *  COMP2033 - Applied Data Structures
+ *  This is my own work as defined by the University's
+ *  Academic Misconduct policy.
+ *  06/04/2023
+ * @since 1.0
  */
 import java.util.Scanner;
 
@@ -42,7 +44,8 @@ public class Loops {
 	}
 	
 	
-	 public static void main(String[] args) {
+	 @SuppressWarnings("resource")
+	public static void main(String[] args) {
 	   boolean exit = true;
 		 System.out.println("Words - Task 2 - Loops");
 			while(exit) {
@@ -70,7 +73,7 @@ public class Loops {
 				loopWords.printWords(numberTimes);
 				
 				System.out.println();
-				System.out.print("Would you like to encode/decode again? Y/N ");
+				System.out.print("Would you like to print words on screen again? Y/N ");
 				
 				String response = scanner.nextLine();
 				

@@ -1,38 +1,30 @@
 package ca1.task4;
 
-
-
 import java.util.Objects;
-
-
 
 /**
  * <p>Task 4: “Remove duplicate object from array”
- * <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a>
- * This task requires you to implement the equals() and hashCode() methods in the Car class. 
- * Two cars are equal if they have the same model and colour, regardless of make.
-	
- * Implement the ‘toString()’ method of the Car class. 
- * The toString() should return a string representation of a Car. 
- * The format should be “<Make>, <Model>, <Color>”.   
- * Implement the ‘removeDuplicates’ method in the CarProcessing class. 
- * Your method should remove duplicates from the given array using the Car equals() method. 
- * Write unit tests for both the Car and the CarProcessing class. 
-
- * </p>
- * @param make the brand or make of the car
- * @param model the model of the branded car
- * @param colour the color of the car
- * @return toString of the object
+ * <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a><p>
+ * File: Car.java
+ *  Author: Hayden Kerr
+ *  Email Id: kerhy006@mymail.unisa.edu.au
+ *  COMP2033 - Applied Data Structures
+ *  This is my own work as defined by the University's
+ *  Academic Misconduct policy.
+ *  06/04/2023
  * @since 1.0
  */
-
-
 public class Car {
 	private String make;
 	private String model;
 	private String color;
 	
+	/**
+	 * 
+	 * @param make the brand or make of the car
+	 * @param model the model of the branded car
+	 * @param colour the color of the car
+	 */
 	public Car(String make, String model, String color) {
 		this.make = make;
 		this.model = model;
@@ -40,6 +32,7 @@ public class Car {
 	}
 	
 	// create setters / getters for the car class objects
+	
 	public void setMake(String make) {
 		this.make = make;
 	}
@@ -70,7 +63,7 @@ public class Car {
 
 	@Override
 	/** over ride the default eclipse source created hashcode. limiting the hashcode 
-	*  to only be based on model / colour
+	* to only be based on model / colour
 	* ie have the equals and hashcode data fields the same as to not violate the java 
 	* contract for hashcode 
 	* if obj1.equals(obj2) is true, then obj1.hashCode() == obj2.hashCode(). 
@@ -90,11 +83,6 @@ public class Car {
 		
 		Car other = (Car) obj;
 		return Objects.equals(model, other.model) && Objects.equals(color, other.color);
-	}
-	
-
-
-
-    
+	}   
 }
 

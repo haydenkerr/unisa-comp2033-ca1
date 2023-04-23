@@ -1,28 +1,31 @@
 package ca1.task1;
+import java.util.Scanner;
 
 /**
  * @author hayden
+ * <p>Task 1: “CaesarCypher”
+ * <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a>
  *  File: CaesarCypher.java
-Author: Hayden Kerr
-Email Id: kerhy006@mymail.unisa.edu.au
-COMP2033 - Applied Data Structures
-This is my own work as defined by the University's
-Academic Misconduct policy.
-04/04/2023
+ *  Author: Hayden Kerr
+ *  Email Id: kerhy006@mymail.unisa.edu.au
+ *  COMP2033 - Applied Data Structures
+ *  This is my own work as defined by the University's
+ *  Academic Misconduct policy.
+ *  04/04/2023
  *
  */
-import java.util.Scanner;
-
 public class CaesarCypher {
 
-	
+	/**
+	 *  @param ALPHABET_LENGTH constant for alphabet length
+	 */  
 	   private static final int ALPHABET_LENGTH = 26;
 
 	   
 	   /**
 	 * @param input - input is the string input
 	 * @param offset - offset from the 
-	 * @return
+	 * @return encodedOutput - output of encryption user cypher
 	 */
 	public static char[] encode(char[] input, int offset) {
 	        char[] encodedOutput = new char[input.length]; 
@@ -42,6 +45,12 @@ public class CaesarCypher {
 	        return encodedOutput;
 	    }
 	
+	  
+	   /**
+	 * @param input - input is the string input
+	 * @param offset - offset from the 
+	 * @return decodedOutput - output of decryption user cypher
+	 */
 	   public static char[] decode(char[] input, int offset) {
 	        char[] decodedOutput = new char[input.length];
 	        for (int i = 0; i < input.length; i++) {

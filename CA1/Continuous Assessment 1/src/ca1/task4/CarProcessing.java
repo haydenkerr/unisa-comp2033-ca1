@@ -1,9 +1,18 @@
 package ca1.task4;
 
-
-
-
-
+/**
+ * @author hayden
+ * <p>Task 4: “Task 4: “Remove duplicate object from array””
+ * <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a>
+ *  File: CarProcessing.java
+ *  Author: Hayden Kerr
+ *  Email Id: kerhy006@mymail.unisa.edu.au
+ *  COMP2033 - Applied Data Structures
+ *  This is my own work as defined by the University's
+ *  Academic Misconduct policy.
+ *  20/04/2023
+ *
+ */
 public class CarProcessing {
 	public static void main(String[] args) {
 		
@@ -26,9 +35,11 @@ public class CarProcessing {
 			System.out.println(c);
 		}
 	}
-	// https://javarevisited.blogspot.com/2015/06/3-ways-to-find-duplicate-elements-in-array-java.html#:~:text=The%20standard%20way%20to%20find,property%20to%20filter%20duplicate%20elements.
-	
-	
+	/**
+	 * 	
+	 * @param inputArray
+	 * @return singleCars - Array of unique non duplicate entries
+	 */
 	public Car[] removeDuplicates(Car[] inputArray) {
 
 		// go through loop to identify and count distinct cars
@@ -62,8 +73,6 @@ public class CarProcessing {
 	        }
 	    }
 	    return singleCars;
-	        
-
 	
 	}
 	
