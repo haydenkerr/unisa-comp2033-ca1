@@ -92,23 +92,7 @@ public class Car {
 		return Objects.equals(model, other.model) && Objects.equals(color, other.color);
 	}
 	
-	 public static void main(String[] args) {
-	// add in tests to confirm and test variations
-		 
-		 Car tesla = new Car("tesla", "Y", "Black");
-		Car tesla2 = new Car("tesla", "Z", "Black");
-		Car honda = new Car("honda", "Y", "Black");
-		
-		System.out.println(tesla.toString());
-		System.out.println(honda.toString());
-		System.out.print("equals to: ");
-		System.out.println(tesla.equals(tesla2));
-		
-		System.out.println(tesla.hashCode());
-		System.out.println(tesla2.hashCode());
-		System.out.println(honda.hashCode());
-		
-	 }
+
 
 
     
