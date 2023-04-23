@@ -1,6 +1,7 @@
 package ca1.task4;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,77 +27,26 @@ public class CarTest {
 	}
 
 	@Test
-	void testCreateOject() {
+	void testObjectString() {
 		Car carTestOne_tesla = new Car("tesla", "Y", "Black");
-//		Car carTestTwo_tesla = new Car("tesla", "Z", "Black");
-//		Car carTestThree_honda = new Car("honda", "Y", "Black");	
-	
-		
-		int expectedCount = 1;
-		
 
-		assertEquals(expectedCount, carTestOne_tesla, "The count does not work as expected.");
+		
+		String expectedString = "tesla, Y, Black";
+		
+	
+		assertEquals(expectedString, carTestOne_tesla.toString(), "The method does not work as expected." );
 	}
 
-//	@Test
-//	void testDuplicateTwo() {
-//	CarProcessing cp = new CarProcessing();
-//	
-//	
-//	Car[] cars = { 
-//			new Car("Honda", "Civic", "Red"),
-//			new Car("Holden", "Civic", "Red"),
-//			new Car("Holden", "Rodeo", "Red")
-//
-//	};
-//	
-//	Car[] noDuplicatesObj = cp.removeDuplicates(cars);
-//	
-//
-//	
-//	int expectedCount = 2;
-//	
-//
-//	assertEquals(expectedCount, noDuplicatesObj.length, "The count does not work as expected.");
-//}
-//
-//	@Test
-//	void testDuplicateThree() {
-//	CarProcessing cp = new CarProcessing();
-//	
-//	
-//	Car[] cars = { 
-//			new Car("Honda", "Civic", "Red"),
-//			new Car("Tesla", "Y", "Red"),
-//			new Car("Holden", "Rodeo", "Red")
-//
-//	};
-//	
-//	Car[] noDuplicatesObj = cp.removeDuplicates(cars);
-////	for(int i =0; i<noDuplicatesObj.length; i++) //test to view the put. 
-////		System.out.println(noDuplicatesObj[i]);
-//
-//	
-//	int expectedCount = 3;
-//	
-//
-//	assertEquals(expectedCount, noDuplicatesObj.length, "The count does not work as expected.");
-//	
-//}
-//	 public static void main(String[] args) {
-//	// add in tests to confirm and test variations
-//		
-//		System.out.println(carTestOne_tesla.toString());
-//		System.out.println(honda.toString());
-//		System.out.print("equals to: ");
-//		System.out.println(tesla.equals(tesla2));
-//		
-//		System.out.println(tesla.hashCode());
-//		System.out.println(tesla2.hashCode());
-//		System.out.println(honda.hashCode());
-//		
-//	 }
+	@Test
+	void testObjectEquals() {
+		Car carTestOne_tesla = new Car("tesla", "Y", "Black");
+		Car carTestTwo_honda = new Car("honda", "Y", "Black");
 
+		System.out.println(carTestOne_tesla.equals(carTestTwo_honda));
+			
+	
+		assertTrue(carTestOne_tesla.equals(carTestTwo_honda), "The method does not work as expected." );
+	}
 
 }
 
