@@ -20,9 +20,9 @@ import java.util.Objects;
  * Write unit tests for both the Car and the CarProcessing class. 
 
  * </p>
- * @param make the amount of incoming damage
- * @param model the amount of incoming damage
- * @param colour the amount of incoming damage
+ * @param make the brand or make of the car
+ * @param model the model of the branded car
+ * @param colour the color of the car
  * @return toString of the object
  * @since 1.0
  */
@@ -39,7 +39,7 @@ public class Car {
 		this.color = color;
 	}
 	
-	// create getters for the car to be able to 
+	// create setters / getters for the car class objects
 	public void setMake(String make) {
 		this.make = make;
 	}
@@ -80,7 +80,7 @@ public class Car {
 	}
 
 	@Override
-	// Two cars are equal if they have the same model and colour, regardless of make.
+	// Two cars are equal if they have the same model and color, regardless of make.
 	// over ride of the default equals method 
 	public boolean equals(Object obj) {
 		if (this == obj) // test if same object
