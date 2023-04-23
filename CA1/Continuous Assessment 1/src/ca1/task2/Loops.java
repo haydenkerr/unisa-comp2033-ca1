@@ -4,15 +4,13 @@ import java.util.Scanner;
 /**
  * @author hayden
  *  <p>Task 2: “Loops”
- *  <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a><p>
- *  File: Loops.java
- *  Author: Hayden Kerr
- *  Email Id: kerhy006@mymail.unisa.edu.au
- *  COMP2033 - Applied Data Structures
- *  This is my own work as defined by the University's
- *  Academic Misconduct policy.
- *  06/04/2023
- * @since 1.0
+ * @see <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">Continual Assessment 1!</a>
+ *  <p>File: Loops.java</p>
+ *  <p>Author: Hayden Kerr</p>
+ *  <p>Email Id: kerhy006@mymail.unisa.edu.au</p>
+ *  <p>COMP2033 - Applied Data Structures</p>
+ *  <p>This is my own work as defined by the University's Academic Misconduct policy.</p>
+ *  <p>04/04/2023</p>
  */
 
 
