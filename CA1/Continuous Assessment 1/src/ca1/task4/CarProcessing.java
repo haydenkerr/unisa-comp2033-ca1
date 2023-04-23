@@ -1,10 +1,8 @@
 package ca1.task4;
 
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
-import ca1.task4.Car;
+
+
 
 public class CarProcessing {
 	public static void main(String[] args) {
@@ -33,20 +31,37 @@ public class CarProcessing {
 	
 	public Car[] removeDuplicates(Car[] inputArray) {
 
-		int carCount = 0;
+		// go through loop to identify and count distinct cars
+		int distinctCar = 0;
 	    for (int i = 0; i < inputArray.length; i++) {
 	        boolean isDuplicate = false;
+	        for (int j = i + 1; j < inputArray.length; j++) {
+	            if (inputArray[i].equals(inputArray[j])) {
+	                isDuplicate = true; // if one is equals, from car class, then duplicate
+	                break;
+	            }
+	        }
+	        if (!isDuplicate) {
+	        	distinctCar++; // if not duplicate, then increment distinctCar
+	        }
+	    }
+	    
+	    Car[] singleCars = new Car[distinctCar]; // creates a new Car Array length of distinct cars found
+	    int currentIndex = 0;
+	    for (int i = 0; i < inputArray.length; i++) {
+	        boolean isDuplicate = false;
+	        // secondary loop and check for duplicate entries
 	        for (int j = i + 1; j < inputArray.length; j++) {
 	            if (inputArray[i].equals(inputArray[j])) {
 	                isDuplicate = true;
 	                break;
 	            }
 	        }
-	        if (!isDuplicate) {
-	        	carCount++;
+	        if (!isDuplicate) {// if no duplicate, then add from the distinctCar array to the new singleCars object to return.
+	        	singleCars[currentIndex++] = inputArray[i];
 	        }
 	    }
-	    
+	    return singleCars;
 	        
 
 	
