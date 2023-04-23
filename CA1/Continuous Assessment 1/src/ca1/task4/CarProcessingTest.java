@@ -69,8 +69,8 @@ public class CarProcessingTest {
 	};
 	
 	Car[] noDuplicatesObj = cp.removeDuplicates(cars);
-	for(int i =0; i<noDuplicatesObj.length; i++)
-		System.out.println(noDuplicatesObj[i]);
+//	for(int i =0; i<noDuplicatesObj.length; i++) //test to view the put. 
+//		System.out.println(noDuplicatesObj[i]);
 
 	
 	int expectedCount = 3;
