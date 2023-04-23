@@ -17,7 +17,7 @@ import org.junit.jupiter.api.Test;
  *  <p>04/04/2023</p>
 */
 
-public class CarTest {
+class CarTest {
 
 
 	@BeforeEach
