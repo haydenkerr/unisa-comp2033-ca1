@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"ca1.task1","l":"CaesarCypher"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"ca1.task3","l":"ArrayCount"},{"p":"ca1.task1","l":"CaesarCypher"},{"p":"ca1.task4","l":"Car"},{"p":"ca1.task4","l":"CarProcessing"},{"p":"ca1.task4","l":"CarProcessingTest"},{"p":"ca1.task4","l":"CarTest"},{"p":"ca1.task2","l":"Loops"}];updateSearchResults();

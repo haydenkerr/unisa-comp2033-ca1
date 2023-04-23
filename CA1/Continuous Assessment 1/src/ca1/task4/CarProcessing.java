@@ -2,7 +2,7 @@ package ca1.task4;
 
 /**
  * @author hayden
- * <p>Task 4: “Task 4: “Remove duplicate object from array””
+ * <p>“Task 4: “Remove duplicate object from array””
  * @see <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">Continual Assessment 1!</a>
  * 	<p>File: CarProcessing.java</p>
  *  <p>Author: Hayden Kerr</p>
