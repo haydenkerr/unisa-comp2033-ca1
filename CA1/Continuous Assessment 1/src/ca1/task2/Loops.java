@@ -1,11 +1,10 @@
 package ca1.task2;
 
-
-
+import java.util.Scanner;
 /**
  * @author hayden
- *  * <p>Task 4: “Remove duplicate object from array”
- *   * <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a><p>
+ *  <p>Task 2: “Loops”
+ *  <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a><p>
  *  File: Loops.java
  *  Author: Hayden Kerr
  *  Email Id: kerhy006@mymail.unisa.edu.au
@@ -15,23 +14,13 @@ package ca1.task2;
  *  06/04/2023
  * @since 1.0
  */
-import java.util.Scanner;
 
-
-
-/**This task does not have any tests associated with it.  
-In this task, you are required to:
-
-Implement the body of the ‘printWords’ method. 
-Your method needs to print “words” within a loop. 
-The method parameter determines the total number of times the loop should run. 
-Add a ‘main’ method. 
-Create an instance of the Loops object and call 
-the ‘printWords’ method to verify your implementation. 
-
-*/
 
 public class Loops {
+	/**
+	 * 
+	 * @param numberOfTimes - int how many times should the word be output to console
+	 */
 	public void printWords(int numberOfTimes) {
 		
 		
@@ -39,10 +28,7 @@ public class Loops {
 			System.out.print("words");
 			System.out.print(" ");
 			}
-		
-		
 	}
-	
 	
 	 @SuppressWarnings("resource")
 	public static void main(String[] args) {

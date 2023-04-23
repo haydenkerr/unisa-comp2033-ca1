@@ -1,42 +1,28 @@
 package ca1.task3;
-
-
-/**
- * @author hayden
- *  File: ArrayCount.java
-Author: Hayden Kerr
-Email Id: kerhy006@mymail.unisa.edu.au
-COMP2033 - Applied Data Structures
-This is my own work as defined by the University's
-Academic Misconduct policy.
-04/04/2023
- *
- */
-
-/*
- * Task 3: “Count occurrences of a string within an array”
-
-This task requires you to count the number of occurrences of a 
-given target within an array. 
-
-You will need to implement the ‘count’ method contained within the ‘ArrayCount’ class. 
-It is important to consider your unit tests prior to beginning this task. 
-You will need to implement a number of tests to ensure your implementation is correct. 
-
-Consider the following situations:
-The target does not exist in the array, 
-	response if Count = 0 
-The target appears only once in the array, 
-	response if count =1
-The target appears multiple times in the array
-	response if count >1
- */
-
 import java.util.Scanner;
 
 
+/**
+ * <p>Task 3: “Count Occurrences in Array”
+ * <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a><p>
+ * 	File: ArrayCount.java
+ *  Author: Hayden Kerr
+ *  Email Id: kerhy006@mymail.unisa.edu.au
+ *  COMP2033 - Applied Data Structures
+ *  This is my own work as defined by the University's
+ *  Academic Misconduct policy.
+ *  04/04/2023
+ * @since 1.0
+ */
+
 // class ArrayCount will see if target is in stringArray
 public class ArrayCount {
+	/**
+	 * 
+	 * @param stringArray
+	 * @param target
+	 * @return counted int - count of times target string exists in Array
+	 */
 	public int count(String[] stringArray, String target) {
 		
 		int counted=0;
@@ -61,7 +47,9 @@ public class ArrayCount {
 	public static void main(String[] args) {
 		   boolean exit = true;
 			 System.out.println("Array Count - Task 3 ");
-				
+	
+	// create object of ArrayCount and request input from use
+			 // use while loop to continual operation until exit requested
 			 ArrayCount arrayCount = new ArrayCount(); 
 			 while(exit) {
 		    	Scanner scanner = new Scanner(System.in); 
@@ -71,6 +59,7 @@ public class ArrayCount {
 					
 		    		String[] stringArray;
 		    		
+		    		// request the delimiter or separator between string words
 		    		System.out.println("Please enter the delimiter: ");
 		    		System.out.print("Just enter as  , or ,_ or _ ");
 		    		
@@ -78,20 +67,16 @@ public class ArrayCount {
 		    		
 		    		stringArray = inputArray.split( delimiter);
 		    	
-
+		    		// request target string
 		    		System.out.print("Please enter the target: ");
 		    		String target =scanner.nextLine();
-					
-
-
-					
 					
 					int counted = arrayCount.count(stringArray,target);
 					
 					System.out.print(target +" was found " + counted +" times.");
 					System.out.println();
 					
-					System.out.print("Would you like to encode/decode again? Y/N ");
+					System.out.print("Would you like to count again? Y/N ");
 					
 					String response = scanner.nextLine();
 					
