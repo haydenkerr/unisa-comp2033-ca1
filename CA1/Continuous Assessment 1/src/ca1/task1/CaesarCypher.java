@@ -2,10 +2,11 @@ package ca1.task1;
 import java.util.Scanner;
 
 /**
- * @author hayden
+ * 
  * <p>Task 1: “CaesarCypher”
  * @see <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">Continual Assessment 1!</a>
  *  <p>File: CaesarCypher.java</p>
+ * @author hayden
  *  <p>Author: Hayden Kerr</p>
  *  <p>Email Id: kerhy006@mymail.unisa.edu.au</p>
  *  <p>COMP2033 - Applied Data Structures</p>

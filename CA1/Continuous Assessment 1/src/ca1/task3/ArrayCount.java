@@ -6,6 +6,7 @@ import java.util.Scanner;
  * <p>Task 3: “Count Occurrences in Array”
  * @see <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a><p>
  * 	<p>File: ArrayCount.java</p>
+ * @author hayden
  * <p>Author: Hayden Kerr</p>
  *  <p>Email Id: kerhy006@mymail.unisa.edu.au</p>
  *  <p>COMP2033 - Applied Data Structures</p>

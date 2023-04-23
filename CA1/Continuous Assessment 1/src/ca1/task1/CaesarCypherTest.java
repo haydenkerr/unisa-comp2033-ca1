@@ -6,9 +6,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * <p>Task 1: “Caesar Cypher”
+ * <p>Task 1: “Caesar Cypher Test”
  * @see <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a><p>
  * <p> File: CaesarCypherTest.java</p>
+ * @author hayden
  * <p>Author: Hayden Kerr</p>
  *  <p>Email Id: kerhy006@mymail.unisa.edu.au</p>
  *  <p>COMP2033 - Applied Data Structures</p>
