@@ -1,6 +1,6 @@
 package ca1.task4;
 /*
- * Task 4: “Remove duplicate object from array”
+ * 
 
 This task requires you to implement the equals() and hashCode() methods in the Car class. 
 Two cars are equal if they have the same model and colour, regardless of make.
@@ -14,9 +14,22 @@ Write unit tests for both the Car and the CarProcessing class.
 
  */
 
-import java.util.HashSet;
+
 import java.util.Objects;
-import java.util.Set;
+
+
+
+/**
+ * <p>Task 4: “Remove duplicate object from array”
+ * <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a>
+ * </p>
+ * @param make the amount of incoming damage
+ * @param model the amount of incoming damage
+ * @param colour the amount of incoming damage
+ * @return toString of the object
+ * @since 1.0
+ */
+
 
 public class Car {
 	private String make;
@@ -59,11 +72,12 @@ public class Car {
 	}
 
 	@Override
-	// over ride the default eclipse source created hashcode. limiting the hashcode 
-	// to only be based on model / colour
-	// ie have the equals and hashcode data fields the same as to not violate the java 
-	// contract for hashcode 
-	// if obj1.equals(obj2) is true, then obj1.hashCode() == obj2.hashCode(). 
+	/** over ride the default eclipse source created hashcode. limiting the hashcode 
+	*  to only be based on model / colour
+	* ie have the equals and hashcode data fields the same as to not violate the java 
+	* contract for hashcode 
+	* if obj1.equals(obj2) is true, then obj1.hashCode() == obj2.hashCode(). 
+	*/
 	public int hashCode() {
 		return Objects.hash(model, color );
 	}
