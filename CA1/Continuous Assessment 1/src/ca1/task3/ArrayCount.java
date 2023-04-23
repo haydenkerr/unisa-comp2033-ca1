@@ -4,16 +4,14 @@ import java.util.Scanner;
 
 /**
  * <p>Task 3: “Count Occurrences in Array”
- * <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a><p>
- * 	File: ArrayCount.java
- *  Author: Hayden Kerr
- *  Email Id: kerhy006@mymail.unisa.edu.au
- *  COMP2033 - Applied Data Structures
- *  This is my own work as defined by the University's
- *  Academic Misconduct policy.
- *  04/04/2023
- * @since 1.0
- */
+ * @see <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a><p>
+ * 	<p>File: ArrayCount.java</p>
+ * <p>Author: Hayden Kerr</p>
+ *  <p>Email Id: kerhy006@mymail.unisa.edu.au</p>
+ *  <p>COMP2033 - Applied Data Structures</p>
+ *  <p>This is my own work as defined by the University's Academic Misconduct policy.</p>
+ *  <p>04/04/2023</p>
+*/
 
 // class ArrayCount will see if target is in stringArray
 public class ArrayCount {

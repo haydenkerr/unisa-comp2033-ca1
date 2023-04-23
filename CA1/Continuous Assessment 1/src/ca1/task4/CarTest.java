@@ -7,16 +7,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * @author hayde
- * 
- *  <p>
- *  </p>
- * @param make the amount of incoming damage
- * @param model the amount of incoming damage
- * @param colour the amount of incoming damage
- * @return toString of the object
+ * <p>Task 4: “Car - Remove Duplicates”
+ * <a href="https://uo.unisa.edu.au/course/view.php?id=2945&section=12">CA1!</a><p>
+ *  File: CarTest.java
+ *  Author: Hayden Kerr
+ *  Email Id: kerhy006@mymail.unisa.edu.au
+ *  COMP2033 - Applied Data Structures
+ *  This is my own work as defined by the University's
+ *  Academic Misconduct policy.
+ *  06/04/2023
  * @since 1.0
- * 
  */
 
 public class CarTest {
